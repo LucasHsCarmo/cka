@@ -14,12 +14,16 @@
 kubectl api-resources
 ```
 
+* Comando para criar 1 Pod de maneira rápida na linha de comando e incluir em um arquivo yaml
+
+```
+kubectl run primeiropod -l app=nginx --image=kubedevio/nginx-color:blue -o yaml --dry-run=client
+```
+
 * Comandos para criar: Pod, ReplicaSet e Deployment
 
 ```
-kubectl create -f primeiropod.yaml
-kubectl create -f primeirors.yaml
-kubectl create -f primeirodeployment.yaml
+kubectl create -f primeiropod.yaml -f primeirors.yaml -f primeirodeployment.yaml
 ```
 
 * Comandos para criar ou atualizar: Pod, ReplicaSet e Deployment
@@ -33,12 +37,10 @@ kubectl apply -f primeirodeployment.yaml
 * Comandos para verificar o que está sendo executado: Pod, ReplicaSet e Deployment
 
 ```
-kubectl get po
-kubectl get rs
-kubectl get deploy
+kubectl get po,rs,deploy
 ```
 
-* Comandos para realizar o rollouts e rollbacks
+* Comandos para realizar: rollouts e rollbacks
 
 ```
 kubectl rollout history deploy
