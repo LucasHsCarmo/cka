@@ -8,9 +8,21 @@
 
 ## Comandos utilizados
 
+* Objetos API de um kind
+
 ```
 kubectl api-resources
 ```
+
+* Comandos para criar: Pod, ReplicaSet e Deployment
+
+```
+kubectl create -f primeiropod.yaml
+kubectl create -f primeirors.yaml
+kubectl create -f primeirodeployment.yaml
+```
+
+* Comandos para criar ou atualizar: Pod, ReplicaSet e Deployment
 
 ```
 kubectl apply -f primeiropod.yaml
@@ -18,11 +30,15 @@ kubectl apply -f primeirors.yaml
 kubectl apply -f primeirodeployment.yaml
 ```
 
+* Comandos para verificar o que está sendo executado: Pod, ReplicaSet e Deployment
+
 ```
 kubectl get po
 kubectl get rs
 kubectl get deploy
 ```
+
+* Comandos para realizar o rollouts e rollbacks
 
 ```
 kubectl rollout history deploy
@@ -30,6 +46,8 @@ kubectl get rs
 kubectl rollout undo deploy primeirodeployment
 kubectl set image deploy primeirodeployment meucontainer=kubedevio/nginx-color:green
 ```
+
+* Testar esse comando aqui
 
 ```
 kubectl delete all selector app=exemplo
