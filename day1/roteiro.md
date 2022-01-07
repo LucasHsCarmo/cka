@@ -38,6 +38,7 @@ kubectl apply -f primeirodeployment.yaml
 
 ```
 kubectl get po,rs,deploy
+kubectl get all
 ```
 
 * Comandos para realizar: rollouts e rollbacks
