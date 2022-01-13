@@ -53,5 +53,5 @@ kubectl set image deploy primeirodeployment meucontainer=kubedevio/nginx-color:g
 * Testar esse comando aqui
 
 ```
-kubectl delete all selector app=exemplo
+kubectl delete all --selector app=exemplo
 ```
