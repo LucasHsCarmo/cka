@@ -50,7 +50,7 @@ kubectl rollout undo deploy primeirodeployment
 kubectl set image deploy primeirodeployment meucontainer=kubedevio/nginx-color:green
 ```
 
-* Testar esse comando aqui
+* Deletando todos os objetos que possuem o selector exemplo
 
 ```
 kubectl delete all --selector app=exemplo
