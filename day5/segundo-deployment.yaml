@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: segundo-deployment
+  namespace: default
+  labels:
+    run: nginx
+    app: giropops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx
+  template:
+    metadata:
+      labels:
+        run: nginx
+        dc: BR
+    spec: 
+      containers:
+      - name: nginx
+        image: nginx
+        ports: 
+        - containerPort: 80

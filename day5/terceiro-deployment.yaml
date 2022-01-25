@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terceiro-deployment
+  namespace: default
+  labels:
+    run: nginx
+    app: giropops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: nginx
+  template:
+    metadata:
+      labels:
+        run: nginx
+        dc: NL
+    spec: 
+      containers:
+      - name: nginx
+        image: nginx
+        ports: 
+        - containerPort: 80
+      nodeSelector:
+        disk: SSD
