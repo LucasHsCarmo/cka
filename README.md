@@ -9,3 +9,4 @@ Dica para montar os laboratórios de forma gratuita: https://labs.play-with-k8s.
 - [Recursos - Day3](day3/roteiro.md)
 - [Taint - Day4](day4/roteiro.md)
 - [Deployment - Day5](day5/roteiro.md)
+- [Daemonset - Day6](day6/roteiro.md)
